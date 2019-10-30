@@ -7,7 +7,7 @@ Author: Amy McGovern
 from pyparrot.Minidrone import Mambo
 
 # you will need to change this to the address of YOUR mambo
-mamboAddr = "e0:14:d0:63:3d:d0"
+mamboAddr = os.environ.get('DRONE_ADDRESS')
 
 # make my mambo object
 # remember to set True/False for the wifi depending on if you are using the wifi or the BLE to connect
