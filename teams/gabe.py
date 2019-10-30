@@ -7,7 +7,7 @@ import os
 # make my mambo object
 # remember to set True/False for the wifi depending on if you are using the wifi or the BLE to connect
 
-mamboaddr = os.environ.get('DRONE_ADDRESS')
+mamboAddr = os.environ.get('DRONE_ADDRESS')
 
 mambo = Mambo(mamboAddr, use_wifi=False)
 
@@ -41,57 +41,58 @@ if (success):
     mambo.smart_sleep(2)
 
     print("Flying direct: yaw")
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
-
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
+    for x in range(4):
+      mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
+      mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
+      mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
+      mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
+      mambo.smart_sleep(0.5)
 
     mambo.fly_direct(roll=0, pitch=0, yaw=90, vertical_movement=0, duration=0.4)
+    mambo.smart_sleep(1.0)
 
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
 
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
-
+    for x in range(4):
+      mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
+      mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
+      mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
+      mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
+      mambo.smart_sleep(0.5)
+    
     mambo.fly_direct(roll=0, pitch=0, yaw=90, vertical_movement=0, duration=0.4)
-
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
-
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
-
-    mambo.fly_direct(roll=0, pitch=0, yaw=90, vertical_movement=0, duration=0.4)
+    mambo.smart_sleep(1.0)
 
     print("Flying direct: going backwards (negative pitch)")
-    mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=-50, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=-50, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=50, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=-50, duration=0.4)
-    mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=50, duration=0.4)
+    for x in range(4):
+      mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=-50, duration=0.4)
+      mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=50, duration=0.4)
+      mambo.smart_sleep(0.8)
+
 
     print("Boogie Woogie")
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.5)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.5)
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.5)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.5)
-    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.5)
-    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.5)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
+    mambo.smart_sleep(0.6)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.3)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.3)
+    mambo.smart_sleep(0.5)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.smart_sleep(0.4)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.smart_sleep(0.3)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.smart_sleep(0.2)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
 
     print("Flying direct: going up")
     mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=1)
