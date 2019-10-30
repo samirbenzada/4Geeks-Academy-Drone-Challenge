@@ -94,7 +94,7 @@ if (success):
     mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-2, duration=0.5)
     #//up down
 
-     print("Flying direct: going forward (positive pitch)")
+    print("Flying direct: going forward (positive pitch)")
     mambo.fly_direct(roll=0, pitch=70, yaw=0, vertical_movement=0, duration=2)
 
     print("Flying direct: going backwards (negative pitch)")
@@ -123,7 +123,7 @@ if (success):
     mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-2, duration=0.5)
     #//up down
 
-     print("Flying direct: going forward (positive pitch)")
+    print("Flying direct: going forward (positive pitch)")
     mambo.fly_direct(roll=0, pitch=70, yaw=0, vertical_movement=0, duration=2)
 
     print("Flying direct: going backwards (negative pitch)")
