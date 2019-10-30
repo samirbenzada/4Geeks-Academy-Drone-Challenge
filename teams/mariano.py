@@ -19,13 +19,13 @@ if not success:
 
 
 print("sleeping")
-mambo.smart_sleep(2)
+mambo.smart_sleep(1)
 mambo.ask_for_state_update()
-mambo.smart_sleep(2)
+mambo.smart_sleep(1)
 
 print("taking off!")
-mambo.safe_takeoff(10)
-mambo.smart_sleep(4)
+mambo.safe_takeoff(5)
+mambo.smart_sleep(1)
 
 
 print("dancing")
