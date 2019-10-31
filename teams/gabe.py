@@ -46,10 +46,13 @@ if (success):
       mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=0.4)
       mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
       mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=0.4)
+      mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=20, duration=0.2)
       mambo.smart_sleep(0.5)
 
     mambo.fly_direct(roll=0, pitch=0, yaw=90, vertical_movement=0, duration=0.4)
+
     mambo.smart_sleep(1.0)
+    mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=100, duration=0.2)
 
 
     for x in range(4):
@@ -61,13 +64,6 @@ if (success):
     
     mambo.fly_direct(roll=0, pitch=0, yaw=90, vertical_movement=0, duration=0.4)
     mambo.smart_sleep(1.0)
-
-    print("Flying direct: going backwards (negative pitch)")
-    for x in range(4):
-      mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=-50, duration=0.4)
-      mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=50, duration=0.4)
-      mambo.smart_sleep(0.8)
-
 
     print("Boogie Woogie")
     mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.4)
@@ -93,6 +89,20 @@ if (success):
     mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
     mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
     mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=0.2)
+    mambo.smart_sleep(1.0)
+
+
+
+    for x in range(6):
+      for y in range(3):
+        mambo.fly_direct(roll=0, pitch=0, yaw=360, vertical_movement=0, duration=0.4)
+        mambo.smart_sleep(0.2)
+      mambo.smart_sleep(1.0)
+
+
+
+
+
 
     print("Flying direct: going up")
     mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=1)
